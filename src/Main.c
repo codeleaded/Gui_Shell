@@ -18,6 +18,9 @@ void Update(AlxWindow* w){
 	if(Stroke(ALX_KEY_ENTER).PRESSED)
 		Shell_Execute(&shell);
 
+	if(Stroke(ALX_KEY_CTRL).DOWN && Stroke(ALX_KEY_C).PRESSED)
+		Shell_Signal_Int(&shell);
+
 	Clear(BLACK);
 
 	Shell_Render(WINDOW_STD_ARGS,&shell);

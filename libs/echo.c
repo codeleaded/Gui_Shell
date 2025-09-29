@@ -2,7 +2,11 @@
 #include "/home/codeleaded/System/Static/Library/Shell.h"
 
 void* echo(Process* p){
-    Process_Write_Stdout(p,"Hello World\n");
+    if(p->args.size == 2){
+        Process_Write_Stdout(p,*(char**)Vector_Get(&p->args,1));
+    }else{
+        Process_Write_Stdout(p,"echo: Error because echo expected 2 args but got 0 or 3+\n");
+    }
     return 0;
 }
 
