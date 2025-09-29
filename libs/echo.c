@@ -1,6 +1,8 @@
 #include "/home/codeleaded/System/Static/Library/DLL.h"
+#include "/home/codeleaded/System/Static/Library/Shell.h"
 
-int echo(void* arg,int argc,char** argv){
+void* echo(Process* p){
+    Process_Write_Stdout(p,"Hello World\n");
     return 0;
 }
 
