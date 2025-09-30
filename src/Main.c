@@ -11,6 +11,7 @@ void Setup(AlxWindow* w){
 	SetAlxFont(AlxFont_HIGH);
 
 	shell = Shell_New("Root","~","./bin/",GetWidth(),GetHeight());
+	Shell_LoadHistory(&shell,"./data/History.txt");
 }
 void Update(AlxWindow* w){
 	Shell_Update(&shell,w->Strokes,(Vec2){ w->MouseX,w->MouseY });
@@ -35,6 +36,7 @@ void Update(AlxWindow* w){
 	//String_Free(&str);
 }
 void Delete(AlxWindow* w){
+	Shell_SaveHistory(&shell,"./data/History.txt");
 	Shell_Free(&shell);
 }
 
