@@ -15,6 +15,11 @@ void Setup(AlxWindow* w){
 void Update(AlxWindow* w){
 	Shell_Update(&shell,w->Strokes,(Vec2){ w->MouseX,w->MouseY });
 
+	if(Stroke(ALX_KEY_UP).PRESSED)
+		Shell_UpHistory(&shell);
+	if(Stroke(ALX_KEY_DOWN).PRESSED)
+		Shell_DownHistory(&shell);
+
 	if(Stroke(ALX_KEY_ENTER).PRESSED)
 		Shell_Execute(&shell);
 
