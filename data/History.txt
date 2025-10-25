@@ -10,3 +10,9 @@ echo "Hello World\n"
 echo "Hello World\n"
 
 echo "Hello World\n"
+
+ls
+
+cd "/
+"
+cd "/"
