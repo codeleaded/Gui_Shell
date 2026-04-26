@@ -1,193 +1,53 @@
-# Gui_Shell
+# Project README
 
+## Overview
+The project is a GUI Shell application built in C. It utilizes libraries such as WindowEngine1.0, Files, and Shell to create an interactive command-line interface within a graphical user environment.
 
-## Project Overview
+## Features
+- Command-line interface (CLI) with history support.
+- Basic shell functionalities like executing commands and navigating the filesystem.
 
-This project implements specialized functionality related to shell.
-
-## Core Components
-
-### Main Functionality
-- Implements core algorithms for shell
-- Efficient data structures
-- Optimized performance
-- Clean code organization
-
-### Technical Features
-- C/C++ implementation
-- Dynamic memory management
-- Platform-independent design
-- Real-time capable
-
-### Architecture
-- Module separation
-- Clear interface design
-- Proper abstraction layers
-- Extensible design
-
-## Use Cases
-- Production systems
-- Educational purposes
-- Research applications
-- Performance-critical operations
-
-## Performance Characteristics
-- Optimized algorithms
-- Efficient memory usage
-- Scalable architecture
-- Minimal overhead
-
-## Implementation Quality
-- Well-organized code
-- Meaningful naming
-- Proper error handling
-- Memory management
-
-## Build and Deployment
-- Standard C/C++ compilation
-- Makefile-based building
-- Cross-platform support
-- Easy integration
-
-
-## Building the Project
-
+## Project Structure
 ### Prerequisites
-- C/C++ Compiler (GCC, Clang, or MSVC)
+- C/C++ Compiler and Debugger (GCC, Clang)
 - Make utility
 - Standard development tools
 
-### Build Steps
-
-1. Navigate to project directory:
-```bash
-cd Gui_Shell
-```
-
-2. Build the project:
-```bash
-make -f Makefile.(os) all
-```
-
-3. For clean rebuild:
-```bash
-make -f Makefile.(os) clean
-make -f Makefile.(os) all
-```
-
-4. If there are ./bin and ./libs directories, build libs with:
-```bash
-make -f Makefile.(os) cleanlib
-make -f Makefile.(os) lib
-```
-
-### Build Options
-```bash
-make -f Makefile.(os) all         # build output
-make -f Makefile.(os) do        # build + exe output
-make -f Makefile.(os) clean   # Remove build artifacts
-```
-
-## Running the Project
-
-Execute the compiled binary:
+## Build & Run
+### Linux
+To build and run on Linux:
 
 ```bash
-./build/Main(.exe)
+cd <Project>
+make -f Makefile.linux all
+make -f Makefile.linux exe
 ```
 
-Or using make:
+### Windows
+To build and run on Windows:
+
 ```bash
-make -f Makefile.(os) exe
+cd <Project>
+make -f Makefile.windows all
+make -f Makefile.windows exe
 ```
 
-## Project Organization
+### Wine (Linux Cross-Compile for Windows)
+To build and run using Wine on Linux:
 
-```
-Gui_Shell/
-├── src/
-│   ├── Main.c          # Entry point
-│   └── *.c             # Implementation files
-├── Makefile            # Build configuration
-└── README.md           # This file
+```bash
+cd <Project>
+make -f Makefile.wine all
+make -f Makefile.wine exe
 ```
 
-## Technical Details
+### WebAssembly (Emscripten)
+To build and run the application in a web browser using Emscripten:
 
-### Language: C/C++
-- Performance-oriented
-- Direct hardware access where needed
-- Memory efficient
-- Widely portable
+```bash
+cd <Project>
+make -f Makefile.web all
+make -f Makefile.web exe
+```
 
-### Key Technologies
-- Standard C library
-- System-specific libraries as needed
-- Algorithm optimization
-- Efficient data structures
-
-### Code Quality
-- Clean, readable implementation
-- Proper error handling
-- Resource management
-- Well-documented algorithms
-
-## Development Notes
-
-### Architecture Decisions
-- Modular design for reusability
-- Efficient algorithms for performance
-- Clear separation of concerns
-- Extensible structure
-
-### Performance Optimizations
-- Algorithm efficiency
-- Memory layout optimization
-- Cache-conscious programming
-- Minimal overhead
-
-### Portability
-- Cross-platform compatible
-- Platform-specific optimizations where possible
-- Standard library usage
-- No external dependencies (where feasible)
-
-## Troubleshooting
-
-### Build Issues
-- Ensure compiler is installed
-- Check file paths and permissions
-- Verify Make installation
-- Review compiler error messages
-
-### Runtime Issues
-- Check input data validity
-- Verify file accessibility
-- Ensure sufficient memory
-- Review output format
-
-### Performance Issues
-- Check compiler optimization flags
-- Profile hot code paths
-- Review algorithm complexity
-- Consider input size
-
-## Future Improvements
-
-Potential enhancements:
-- Additional optimization opportunities
-- Extended functionality
-- Platform-specific optimizations
-- Performance profiling
-
-## References
-
-For technical background:
-- Algorithm textbooks
-- Computer science references
-- Language documentation
-- Online educational resources
-
----
-
-*Project implementing practical algorithms and data structures in C/C++*
+For more detailed instructions on each platform, refer to the respective `Makefile` files.
