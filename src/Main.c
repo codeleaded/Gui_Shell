@@ -10,7 +10,7 @@ Shell shell;
 void Setup(AlxWindow* w){
 	SetAlxFont(ALXFONT_HIGH);
 
-	shell = Shell_New("Root","~","./bin/",GetWidth(),GetHeight());
+	shell = Shell_New("Root","./data/Root","./bin/",GetWidth(),GetHeight());
 	Shell_LoadHistory(&shell,"./data/History.txt");
 }
 void Update(AlxWindow* w){

@@ -2,11 +2,19 @@
 #include "/home/codeleaded/System/Static/Library/Shell.h"
 
 void* touch(Process* p){
+    Shell* sh = (Shell*)p->parent;
+
     if(p->args.size == 2){
-        //Process_Write_Stdout(p,*(char**)Vector_Get(&p->args,1));
-        Files_Write(*(char**)Vector_Get(&p->args,1),NULL,0LL);
+        CStr rpath = CStr_Format("%s/%s/%s",sh->Root,sh->Path,*(char**)Vector_Get(&p->args,1));
+        CStr crpath = Files_CompressPath(rpath);
+
+        String_Appendf(&p->stream_stdout,"%s\n",crpath);
+        Files_Create(crpath);
+
+        CStr_Free(&crpath);
+        CStr_Free(&rpath);
     }else{
-        Process_Write_Stdout(p,"echo: Error because echo expected 2 args but got 0 or 3+\n");
+        Process_Write_Stdout(p,"touch: Error because touch expected 2 args!\n");
     }
     return 0;
 }

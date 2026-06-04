@@ -1,18 +1,8 @@
-echo "Hello World\n"
-
-echo "Hello World\n"
-echo "Hello World\n"
-
-touch "./data/Hello"
-
-echo "Hello World\n"
-
-echo "Hello World\n"
-
-echo "Hello World\n"
-
+echo "Hello World"
 ls
-
-cd "/
-"
-cd "/"
+echo "Hello World"
+echo Hello World
+echo Hello_World
+ls
+touch Wow
+ls
