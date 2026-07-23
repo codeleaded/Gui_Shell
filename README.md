@@ -1,7 +1,7 @@
 # Project README
 
 ## Overview
-The project is a GUI Shell application built in C. It utilizes libraries such as WindowEngine1.0, Files, and Shell to create an interactive command-line interface within a graphical user environment.
+The project is a GUI Shell application built in C. It utilizes libraries such as WindowEngine, Files, and Shell to create an interactive command-line interface within a graphical user environment.
 
 ## Features
 - Command-line interface (CLI) with history support.
